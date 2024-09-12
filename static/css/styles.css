@@ -1,14 +1,14 @@
 body {
-    font-family: 'small', sans-serif;
-    background-color: #000;
-    color: #ffd700;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Черный фон */
+    color: #ffd700; /* Золотой текст */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #000000;
-    padding: 15px 0;
+    background-color: #007bff;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -23,7 +23,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: gold;
+    color: #ffd700; /* Золотой текст */
     text-decoration: none;
     font-weight: bold;
 }
@@ -33,29 +33,42 @@ main {
     text-align: center;
 }
 
-.welcome-section {
-    background-color: #000000;
+.registration-section {
+    background-color: #333; /* Темный фон для секции */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
     position: relative;
 }
 
-.logo-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffd700; /* Золотой текст */
 }
 
-.logo {
-    width: 250px; /* Уменьшение размера эмблемы */
-    height: auto;
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.error-messages {
+    color: red;
+    margin-top: 10px;
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: #000000;
-    color: gold;
+    background-color: #007bff;
+    color: #ffd700; /* Золотой текст */
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
@@ -63,12 +76,12 @@ main {
 }
 
 .btn-primary {
-    background-color: grey;
+    background-color: #0056b3;
 }
 
 footer {
-    background-color: #000000;
-    color: gold;
+    background-color: #007bff;
+    color: #ffd700; /* Золотой текст */
     text-align: center;
     padding: 10px 0;
     position: fixed;

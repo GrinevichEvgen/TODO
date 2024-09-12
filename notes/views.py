@@ -1,4 +1,3 @@
-from django.contrib.auth import login
 from django.shortcuts import render, redirect
 
 from notes.forms import AddNoteForm
@@ -24,8 +23,8 @@ def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
+            # Обработка данных формы
+            # Например, создание пользователя
             return redirect('home')
     else:
         form = RegisterForm()
