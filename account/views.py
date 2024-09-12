@@ -7,7 +7,7 @@ from django.views import View
 class RegisterView(View):
     def get(self, request):
         form = UserCreationForm()
-        return render(request, 'registration/register.html', {'form': form})
+        return render(request, 'notes/register.html', {'form': form})
 
     def post(self, request):
         form = UserCreationForm(request.POST)
@@ -15,7 +15,9 @@ class RegisterView(View):
             user = form.save()
             login(request, user)
             return redirect('profile')
-        return render(request, 'registration/register.html', {'form': form})
+        else:
+            print(form.errors)
+        return render(request, 'notes/register.html', {'form': form})
 
 
 class ProfileView(View):
