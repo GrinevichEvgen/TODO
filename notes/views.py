@@ -20,9 +20,6 @@ def index(request):
     return render(request, "index.html", {"notes": notes, "form": form})
 
 
-
-
-
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
