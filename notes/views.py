@@ -34,3 +34,7 @@ def register(request):
 
 def home(request):
     return render(request, 'notes/home.html')
+
+
+def login_view(request):
+    return render(request, 'notes/login.html')

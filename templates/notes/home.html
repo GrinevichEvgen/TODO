@@ -1,56 +1,33 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Домашняя страница</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 20px 0;
-        }
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <header>
-        <img src="{% static 'static/media/oxi_emblem.png' %}" alt="OXI Emblem" class="logo">
-        <h1>Добро пожаловать в OXI!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'register' %}">Регистрация</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <p>Мы рады видеть вас здесь. Исследуйте наш сайт и наслаждайтесь его возможностями!</p>
-        <a href="#" class="button">Узнать больше</a>
-    </div>
+    <main>
+        <section class="welcome-section">
+            <div class="logo-container">
+                <img src="{% static 'media/oxi_emblem.png' %}" alt="Логотип" class="logo">
+            </div>
+            <h1>Добро пожаловать!</h1>
+            <p>Мы рады видеть вас здесь. Узнайте больше о наших услугах и зарегистрируйтесь, чтобы получить доступ ко всем возможностям.</p>
+            <a href="{% url 'register' %}" class="btn btn-primary">Узнать больше</a>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Ваш сайт. Все права защищены.</p>
+    </footer>
 </body>
 </html>
