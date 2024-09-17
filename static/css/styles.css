@@ -1,90 +1,72 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000; /* Черный фон */
-    color: #ffd700; /* Золотой текст */
-    margin: 0;
-    padding: 0;
+.form-label {
+  color: #555;
+  font-size: 12px;
 }
 
-header {
-    background-color: #007bff;
-    padding: 10px 0;
+.form-password,
+.form-text {
+  border-radius: 2px;
+  border: 0;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 40px 0 10px;
+  width: 100%;
+  transition: 100ms all linear 0s;
+  background-size: 0 2px, 100% 1px;
+  background: #f1f1f1 linear-gradient(109.6deg, rgba(116, 18, 203, 1) 11.2%, rgba(230, 46, 131, 1) 91.2%) no-repeat 50% 100%, 50% 100%;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+.form-password:focus,
+.form-text:focus {
+  background-size: 100% 2px, 100% 1px;
+  outline: none;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.register {
+  transform: scale(1.01);
+  background-image: linear-gradient(109.6deg, rgba(116, 18, 203, 1) 11.2%, rgba(230, 46, 131, 1) 91.2%);
 }
 
-nav ul li a {
-    color: #ffd700; /* Золотой текст */
-    text-decoration: none;
-    font-weight: bold;
+.register .fas,
+.register strong {
+  color: #fff;
 }
 
-main {
-    padding: 20px;
-    text-align: center;
+.register .form .form-label {
+  color: #fff;
 }
 
-.registration-section {
-    background-color: #333; /* Темный фон для секции */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    position: relative;
+.register .form .form-row .fas {
+  color: #fff; /* Замените на фактическое значение цвета */
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #ffd700; /* Золотой текст */
+.register .form .button-login {
+  margin-top: 20px;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="tel"],
-input[type="email"],
-input[type="password"] {
-    width: 20%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
+.register .btn-login {
+  background: #fff;
+  color: #555;
 }
 
-.error-messages {
-    color: red;
-    margin-top: 10px;
+.register .btn-login .fas.fa-arrow-right {
+  color: #555;
 }
 
-.btn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffd700; /* Золотой текст */
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
+.register .btn-login:hover {
+  background: #d5d7de;
 }
 
-.btn-primary {
-    background-color: #0056b3;
+.register .create-account {
+  color: #fff;
 }
 
-footer {
-    background-color: #007bff;
-    color: #ffd700; /* Золотой текст */
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.register .social-media {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.register .social-media .fab {
+  margin: 0 3px;
 }
