@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -58,7 +60,6 @@
 </head>
 <body>
     <div class="container">
-        {% load static %}
         <img src="{% static 'media/oxi_emblem.png' %}" alt="Logo" class="logo">
         <h2>Login</h2>
         <form method="post">

@@ -40,3 +40,7 @@ class ProfileView(View):
         class ProfileView(LoginRequiredMixin, View):
             def get(self, request):
                 return render(request, 'notes/profile.html')
+
+
+def login_view(request):
+    return None

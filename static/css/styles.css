@@ -1,72 +1,69 @@
-.form-label {
-  color: #555;
-  font-size: 12px;
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-.form-password,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 600px; /* Ограничение максимальной ширины */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login, .register {
+    margin: 20px 0;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
 .form-text {
-  border-radius: 2px;
-  border: 0;
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 0 40px 0 10px;
-  width: 100%;
-  transition: 100ms all linear 0s;
-  background-size: 0 2px, 100% 1px;
-  background: #f1f1f1 linear-gradient(109.6deg, rgba(116, 18, 203, 1) 11.2%, rgba(230, 46, 131, 1) 91.2%) no-repeat 50% 100%, 50% 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.form-password:focus,
-.form-text:focus {
-  background-size: 100% 2px, 100% 1px;
-  outline: none;
+.btn-login {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.register {
-  transform: scale(1.01);
-  background-image: linear-gradient(109.6deg, rgba(116, 18, 203, 1) 11.2%, rgba(230, 46, 131, 1) 91.2%);
+.btn-login:hover {
+    background-color: #0056b3;
 }
 
-.register .fas,
-.register strong {
-  color: #fff;
+.forgot, .create-account, .social-media {
+    margin-top: 10px;
+    display: block;
+    color: #555;
 }
 
-.register .form .form-label {
-  color: #fff;
-}
-
-.register .form .form-row .fas {
-  color: #fff; /* Замените на фактическое значение цвета */
-}
-
-.register .form .button-login {
-  margin-top: 20px;
-}
-
-.register .btn-login {
-  background: #fff;
-  color: #555;
-}
-
-.register .btn-login .fas.fa-arrow-right {
-  color: #555;
-}
-
-.register .btn-login:hover {
-  background: #d5d7de;
-}
-
-.register .create-account {
-  color: #fff;
-}
-
-.register .social-media {
-  color: #fff;
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-.register .social-media .fab {
-  margin: 0 3px;
+.social-media i {
+    margin: 0 5px;
+    font-size: 20px;
 }
