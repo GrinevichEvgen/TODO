@@ -14,14 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.views import LogoutView, LoginView
 from django.urls import path, include
 
-from notes.views import home
+from account import views  # Импортируем ваши представления`1
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('notes.urls')),
-    path('', home, name='home'),
-    path('account/', include('account.urls')),
-
-]
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('account/register/', views.RegisterView.as_view(), name='register'),
+    path('login/', LoginView.as_view(template_name='notes/login.html'), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),  # Используем импортированный LogoutView
+    path('profile/', views.ProfileView.as_view(), name='profile'),
+    path('', views.RegisterView.as_view(), name='register'), ]  # Добавляем маршрут для главной страницы
