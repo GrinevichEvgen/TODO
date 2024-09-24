@@ -28,12 +28,12 @@ def register(request):
             return redirect('home')
     else:
         form = RegisterForm()
-    return render(request, 'notes/register.html', {'form': form})
+    return render(request, 'account/register.html', {'form': form})
 
 
 def home(request):
-    return render(request, 'notes/home.html')
+    return render(request, 'account/home.html')
 
 
 def login_view(request):
-    return render(request, 'notes/login.html')
+    return render(request, 'account/login.html')

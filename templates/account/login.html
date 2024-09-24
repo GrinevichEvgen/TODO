@@ -16,6 +16,7 @@
             height: 100vh;
             margin: 0;
         }
+
         .container {
             background-color: #fff;
             padding: 20px;
@@ -23,19 +24,23 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .container h2 {
             margin-bottom: 20px;
         }
+
         .container form {
             display: flex;
             flex-direction: column;
         }
+
         .container form input {
             margin-bottom: 10px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+
         .container form button {
             padding: 10px;
             background-color: #007bff;
@@ -44,14 +49,17 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
         .container form button:hover {
             background-color: #0056b3;
         }
+
         .container ul {
             list-style-type: none;
             padding: 0;
             color: red;
         }
+
         .logo {
             width: 100px;
             margin-bottom: 20px;
@@ -59,26 +67,26 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="{% static 'media/oxi_emblem.png' %}" alt="Logo" class="logo">
-        <h2>Login</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            {% if form.errors %}
-                <ul>
-                    {% for field in form %}
-                        {% for error in field.errors %}
-                            <li>{{ error }}</li>
-                        {% endfor %}
-                    {% endfor %}
-                    {% for error in form.non_field_errors %}
+<div class="container">
+    <img src="{% static 'media/oxi_emblem.png' %}" alt="Logo" class="logo">
+    <h2>Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.errors %}
+            <ul>
+                {% for field in form %}
+                    {% for error in field.errors %}
                         <li>{{ error }}</li>
                     {% endfor %}
-                </ul>
-            {% endif %}
-            <button type="submit">Login</button>
-        </form>
-    </div>
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <button type="submit">Login</button>
+    </form>
+</div>
 </body>
 </html>

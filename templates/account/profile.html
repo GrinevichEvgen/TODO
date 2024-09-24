@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница пользователя</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .profile-header h1 {
+            margin: 10px 0 0;
+        }
+
+        .profile-header p {
+            color: #666;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .social-links a:hover {
+            color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="profile-header">
+        <img src="{{ user.profile_picture.url }}" alt="Фото пользователя">
+        <h1>Имя пользователя</h1>
+        <p>Описание пользователя</p>
+    </div>
+    <div class="profile-details">
+        <h2>Информация</h2>
+        <p>Email: {{ user.email }}</p>
+    <p>Телефон: {{ user.phone }}</p>
+    <p>Адрес: {{ user.address }}</p>
+        <a href="{% url 'edit_profile' %}">Редактировать профиль</a>
+    </div>
+    <div class="social-links">
+        <h2>Социальные сети</h2>
+        <a href="https://www.facebook.com/username" target="_blank">Facebook</a>
+        <a href="https://www.twitter.com/username" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/username" target="_blank">Instagram</a>
+    </div>
+</div>
+</body>
+</html>
