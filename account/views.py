@@ -36,10 +36,9 @@ class ProfileView(View):
         return render(request, 'account/profile.html')
 
 
-class HomeView(View):
-    def get(self, request):
-        form = UserCreationForm()
-        return render(request, 'account/register.html', {'form': form})
+def get(request):
+    form = UserCreationForm()
+    return render(request, 'account/register.html', {'form': form})
 
 
 class LogoutView(DjangoLogoutView):
